@@ -1,0 +1,64 @@
+{
+	"info": {
+		"_postman_id": "e44697e6-2649-4cfd-af1d-42529ac93d47",
+		"name": "url-shortener-aws-lambda",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "22768891"
+	},
+	"item": [
+		{
+			"name": "Shorten (AWS Lambda)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"originalUrl\": \"https://translate.google.com.br/?hl=pt-BR&sl=pt&tl=en&text=Encurtar%20URL%20com%20AWS%20Lambda&op=translate\",\r\n    \"expirationTime\": \"1732054952\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://q56fpfdm5gogxpsx3lk7kwrbfu0wqika.lambda-url.us-east-2.on.aws/"
+			},
+			"response": []
+		},
+		{
+			"name": "Shorten (API Gateway)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"originalUrl\": \"https://translate.google.com.br/?hl=pt-BR&sl=pt&tl=en&text=Encurtar%20URL%20com%20AWS%20Lambda&op=translate\",\r\n    \"expirationTime\": \"1732324952\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://elbdpiuyz7.execute-api.us-east-2.amazonaws.com/create"
+			},
+			"response": []
+		},
+		{
+			"name": "Redirect (AWS Lambda)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "https://xpeeu3ubk65rt5ysjpbsljfhie0toivk.lambda-url.us-east-2.on.aws/b8f3d4b2-2c5c-4898-992c-77e8753ba913"
+			},
+			"response": []
+		},
+		{
+			"name": "Redirect (API Gateway)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "https://elbdpiuyz7.execute-api.us-east-2.amazonaws.com/72d5b341-588a-4b60-a3ce-8ea81f4bee34"
+			},
+			"response": []
+		}
+	]
+}
