@@ -3,7 +3,7 @@ Este projeto é uma função Lambda desenvolvida em Java 17 que implementa um se
 Ele utiliza o Amazon S3 como armazenamento de dados para as URLs encurtadas, possibilitando o redirecionamento para a URL
 original ou o retorno de mensagens de erro, dependendo da validade do código curto fornecido.
 
-### Funcionalidades
+## Funcionalidades
 
 - **Redirecionamento de URLs**:  
   Recebe um código curto (`shortUrlCode`) no caminho da requisição HTTP e redireciona o usuário para a URL original associada ao código.
@@ -16,7 +16,7 @@ original ou o retorno de mensagens de erro, dependendo da validade do código cu
   - `410 Gone` caso a URL tenha expirado.  
   - `404 Not Found` se o código curto não for encontrado no S3.
 
-### Tecnologias Utilizadas
+## Tecnologias Utilizadas
 
 - **Java 17**: Linguagem principal para o desenvolvimento da função Lambda.  
 - **AWS Lambda**: Para execução sem servidor.  
